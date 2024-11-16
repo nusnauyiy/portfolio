@@ -3,40 +3,32 @@ import { Github, Linkedin as LinkedInIcon, Mail as MailIcon } from 'lucide-react
 
 export const SECTIONS = {
   about: {
-    id: 'about',
-    navItem: 'About',
+    id: 'About',
     title: 'About Me',
-    titleStyles: '', // Default styling
-    component: 'about', // Used to identify which content to render
+    titleStyles: '',
   },
   skills: {
-    id: 'skills',
-    navItem: 'Skills',
+    id: 'Skills',
     title: 'Technical Skills',
-    titleStyles: 'bg-gray-50 dark:bg-gray-800', // Different background
-    component: 'skills',
+    titleStyles: 'bg-gray-50 dark:bg-gray-800',
   },
   portfolio: {
-    id: 'portfolio',
-    navItem: 'Portfolio',
+    id: 'Portfolio',
     title: 'Portfolio',
-    titleStyles: '', // Default styling
-    component: 'portfolio',
+    titleStyles: '',
   },
   contact: {
-    id: 'contact',
-    navItem: 'Contact',
+    id: 'Contact',
     title: 'Get in Touch',
-    titleStyles: '', // Default styling
-    contentStyles: 'text-center', // Center align content
-    component: 'contact',
+    titleStyles: '',
+    contentStyles: 'text-center',
   },
 };
 
 export const ABOUT_SECTION = `I'm a passionate software engineer with expertise in building modern web applications. With
         a strong foundation in both frontend and backend development, I create elegant solutions to
-        complex problems. When I'm not coding, you can find me contributing to open-source projects
-        and exploring new technologies.`;
+        complex problems. When I'm not coding, you can find me designing graphics, arranging music, or convincing my cat, 
+        Rumba, that keyboards are not cat beds (still a work in progress).`;
 
 export const PROJECTS = [
   {
@@ -62,69 +54,98 @@ export const PROJECTS = [
   },
 ];
 
+const FE = "Frontend"
+const BE ="Backend"
+const DEVOPS ="DevOps"
+const DS = "Data Science"
+
 export const SKILLS = [
   {
     name: 'HTML5',
     icon: '/path/to/html5.svg',
-    category: 'Frontend',
+    category: FE,
   },
   {
     name: 'CSS3',
     icon: '/path/to/css3.svg',
-    category: 'Frontend',
+    category: FE,
   },
   {
     name: 'JavaScript',
     icon: '/path/to/javascript.svg',
-    category: 'Frontend',
+    category: FE,
   },
   {
     name: 'React',
     icon: '/path/to/react.svg',
-    category: 'Frontend',
+    category: FE,
   },
   {
     name: 'Node.js',
     icon: '/path/to/nodejs.svg',
-    category: 'Backend',
+    category: BE,
   },
   {
     name: 'Python',
     icon: '/path/to/python.svg',
-    category: 'Backend',
+    category: BE,
   },
   {
     name: 'Java',
     icon: '/path/to/java.svg',
-    category: 'Backend',
+    category: BE,
+  },
+  {
+    name: 'Scala',
+    icon: '/path/to/java.svg',
+    category: BE,
   },
   {
     name: 'AWS',
     icon: '/path/to/aws.svg',
-    category: 'DevOps',
+    category: DEVOPS,
   },
   {
     name: 'Docker',
     icon: '/path/to/docker.svg',
-    category: 'DevOps',
+    category: DEVOPS,
   },
-  // Add more skills as needed
+  {
+    name: 'Kubernetes',
+    icon: '/path/to/docker.svg',
+    category: DEVOPS,
+  },
+  {
+    name: 'SQL',
+    icon: '/path/to/docker.svg',
+    category: DS,
+  },
+  {
+    name: 'R',
+    icon: '/path/to/docker.svg',
+    category: DS,
+  },
+  {
+    name: 'MATLAB',
+    icon: '/path/to/docker.svg',
+    category: DS,
+  },
 ];
 
 export const SOCIAL_LINKS = [
   {
     name: 'GitHub',
     icon: Github,
-    url: 'https://github.com',
+    url: 'https://github.com/nusnauyiy',
   },
   {
     name: 'LinkedIn',
-    icon: LinkedInIcon, // Fixed casing
-    url: 'https://linkedin.com',
+    icon: LinkedInIcon, 
+    url: 'https://ca.linkedin.com/in/y-suzette-sun/',
   },
   {
     name: 'Email',
-    icon: MailIcon, // Fixed casing
-    url: 'mailto:hello@example.com',
+    icon: MailIcon, 
+    url: 'mailto:me@artzie.stream',
   },
 ];

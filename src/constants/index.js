@@ -1,8 +1,14 @@
 import { ExternalLink, Code } from 'lucide-react';
 import { SECTIONS } from './sections';
 
+export const INITIALS = 'YS'
+
+export const NAME = 'Suzette Sun'
+
+export const SUBTITLE = "Full Stack Software Engineer"
+
 // For navbar items
-export const NAV_ITEMS = Object.values(SECTIONS).map((section) => section.navItem);
+export const NAV_ITEMS = Object.values(SECTIONS).map((section) => section.id);
 
 export const BUTTON_ICONS = {
   viewProject: ExternalLink,

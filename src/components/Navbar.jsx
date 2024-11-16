@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { styles } from '../styles/styles';
+import { INITIALS } from '../constants';
 
 const NAV_ITEMS = ['About', 'Skills', 'Portfolio', 'Contact'];
 
@@ -52,7 +53,7 @@ export const Navbar = () => {
                 scrollToSection('home');
               }}
               className={`font-bold text-xl ${navClasses.text}`}>
-              JD
+              {INITIALS}
             </a>
 
             {/* Desktop Navigation */}

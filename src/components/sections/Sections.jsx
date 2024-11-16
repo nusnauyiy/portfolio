@@ -7,15 +7,15 @@ import { Portfolio } from './Portfolio';
 import { Skills } from './Skills';
 
 const SECTION_CONTENTS = {
-  about: About,
-  skills: Skills,
-  portfolio: Portfolio,
-  contact: Contact,
+  About,
+  Skills,
+  Portfolio,
+  Contact,
 };
 
 export const Sections = () => {
   return Object.values(SECTIONS).map((section) => {
-    const ContentComponent = SECTION_CONTENTS[section.component];
+    const ContentComponent = SECTION_CONTENTS[section.id];
 
     return (
       <Section

@@ -2,7 +2,7 @@
 import { ThemeProvider } from './contexts/ThemeProvider';
 import { useTheme } from './contexts/useTheme';
 import { Navbar } from './components/Navbar';
-import { Hero } from './components/sections/Hero';
+import { Hero } from './components/Hero';
 import { Sections } from './components/sections/Sections';
 import { ThemeToggle } from './components/ThemeToggle';
 import { createStyles } from './styles/styles';
