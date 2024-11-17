@@ -1,4 +1,4 @@
-import { SOCIAL_LINKS } from '../../constants/sections';
+import { SOCIAL_LINKS } from './sectionsContents';
 import { styles } from '../../styles/styles';
 
 export const Contact = () => {

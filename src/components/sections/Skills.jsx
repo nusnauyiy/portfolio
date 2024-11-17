@@ -1,5 +1,5 @@
 import { styles } from '../../styles/styles';
-import { SKILLS } from '../../constants/sections';
+import { SKILLS } from './sectionsContents';
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 export const Skills = () => {
   const { registerElement, visibleElements, hiddenElements } = useIntersectionObserver();

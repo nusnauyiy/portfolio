@@ -5,7 +5,7 @@ export const createStyles = () => ({
   },
 
   text: {
-    h1: 'text-5xl font-bold',
+    h1: 'text-6xl font-extrabold',
     h2: 'text-3xl font-bold',
     h3: 'text-2xl font-extralight',
     body: 'text-md leading-relaxed',
@@ -29,7 +29,7 @@ export const createStyles = () => ({
     bg: {
       primary: `bg-white dark:bg-ash-700`,
       secondary: `bg-ash-50 dark:bg-ash-600`,
-      card: `bg-white dark:bg-ash-500`,
+      card: `bg-white dark:bg-ash-800`,
       nav: {
         transparent: `bg-ash-700/20`,
         solid: {
@@ -42,7 +42,7 @@ export const createStyles = () => ({
 
   components: {
     card: {
-      base: 'rounded-lg shadow-lg overflow-hidden',
+      base: 'rounded-lg shadow-md dark:shadow-2xl overflow-hidden',
       hover: 'hover:shadow-xl transition-shadow duration-300',
     },
     button: {

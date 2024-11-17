@@ -1,6 +1,7 @@
-import { styles } from '../styles/styles';
+import { styles } from '../../styles/styles';
 
 export const Section = ({
+  index,
   id,
   title,
   containerStyles = '',
@@ -9,7 +10,7 @@ export const Section = ({
   children,
 }) => {
   return (
-    <section id={id} className={`${styles.layout.section} ${containerStyles}`}>
+    <section id={id} className={`${styles.layout.section} ${index % 2 === 0 && 'bg-ash-100 dark:bg-ash-800'}${containerStyles}`}>
       <div className={`${styles.layout.container} ${contentStyles}`}>
         {title && (
           <h2

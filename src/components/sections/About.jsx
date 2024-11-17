@@ -1,4 +1,4 @@
-import { ABOUT_SECTION } from '../../constants/sections';
+import { ABOUT_SECTION } from './sectionsContents';
 import { styles } from '../../styles/styles';
 
 export const About = () => (

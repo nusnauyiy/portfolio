@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { styles } from '../styles/styles';
-import { INITIALS } from '../constants';
-
-const NAV_ITEMS = ['About', 'Skills', 'Portfolio', 'Contact'];
+import { INITIALS, NAV_ITEMS } from '../constants';
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

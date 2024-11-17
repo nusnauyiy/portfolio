@@ -1,11 +1,11 @@
 import { ExternalLink, Code } from 'lucide-react';
-import { SECTIONS } from './sections';
+import { SECTIONS } from '../components/sections/sectionsContents';
 
 export const INITIALS = 'YS'
 
 export const NAME = 'Suzette Sun'
 
-export const SUBTITLE = "Full Stack Software Engineer"
+export const SUBTITLE = "Software Engineer based in Vancouver"
 
 export const NAV_ITEMS = Object.values(SECTIONS).map((section) => section.id);
 
