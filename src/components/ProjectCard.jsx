@@ -2,28 +2,22 @@ import { ExternalLink, Code } from 'lucide-react';
 import { styles } from '../styles/styles';
 
 export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = false }) => {
+  const reverse = index % 2 === 0
   return (
     <div
       className={`
         ${styles.components.card.base}
         ${isPaper && styles.colors.bg.card}
         ${styles.animation.fadeIn}
-        ${isHidden ? styles.animation.fadeInInitial : ''}
+        ${isHidden ? reverse ? styles.animation.fadeInInitialX1 : styles.animation.fadeInInitialX2 : ''}
         ${isVisible ? styles.animation.fadeInVisible : ''}
       `}>
       <div
         className={`
         flex flex-col
-        ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}
+        ${!reverse ? 'md:flex-row' : 'md:flex-row-reverse'}
         items-stretch
       `}>
-        {!isPaper && <div className="w-full md:w-3/5">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-64 md:h-full object-cover"
-          />
-        </div>}
         <div className={`w-full ${!isPaper && "md:w-2/5"} p-8 flex flex-col justify-center`}>
           <h3 className={`${styles.text.h3} ${styles.colors.text.primary} mb-4`}>
             {project.title}
@@ -49,6 +43,13 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
               </a>}
           </div>
         </div>
+        {!isPaper && <div className="w-full md:w-3/5">
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-64 md:h-full object-cover"
+          />
+        </div>}
       </div>
     </div>
   );

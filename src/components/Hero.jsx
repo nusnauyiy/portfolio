@@ -23,8 +23,8 @@ export const Hero = () => {
       <div className={styles.sections.hero.overlay} />
 
       <div className={styles.sections.hero.content} style={parallaxStyle(-0.2)}>
-        <h1 className={`${styles.text.h1} text-white ${styles.spacing.mb[6]}`}>{NAME}</h1>
-        <p className="text-xl text-white">{SUBTITLE}</p>
+        <h1 className={`font-cursive ${styles.text.h1} text-white ${styles.spacing.mb[6]}`}>{NAME}</h1>
+        <p className="font-sub text-xl text-white">{SUBTITLE}</p>
       </div>
     </section>
   );

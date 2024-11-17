@@ -49,7 +49,7 @@ export const Navbar = () => {
                 e.preventDefault();
                 scrollToSection('home');
               }}
-              className={`font-extrabold text-xl ${navClasses.text}`}>
+              className={`font-cursive font-bold text-2xl ${navClasses.text}`}>
               {INITIALS}
             </a>
 

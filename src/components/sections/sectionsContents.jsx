@@ -35,6 +35,7 @@ export const SECTIONS = {
     id: 'Contact',
     title: `Let's Connect!`,
     contentStyles: 'text-center',
+    titleStyles: 'font-sub',
     component: Contact,
   },
 };

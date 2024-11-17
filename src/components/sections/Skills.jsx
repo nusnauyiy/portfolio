@@ -20,9 +20,9 @@ export const Skills = () => {
                 ref={registerElement(`${category}-${skill.name}`)}
                 className={`
                     ${styles.sections.skills.card}
-                    transition-all duration-500
-                    ${hiddenElements.has(`${category}-${skill.name}`) ? 'opacity-0 translate-y-8' : ''}
-                    ${visibleElements.has(`${category}-${skill.name}`) ? 'opacity-100 translate-y-0' : ''}
+                    ${styles.animation.fadeIn}
+                    ${hiddenElements.has(`${category}-${skill.name}`) ? styles.animation.fadeInInitialY1 : ''}
+                    ${visibleElements.has(`${category}-${skill.name}`) ? styles.animation.fadeInVisible : ''}
                   `}>
                 {skill.icon}
                 <span className={`${styles.text.small} ${styles.colors.text.primary}`}>

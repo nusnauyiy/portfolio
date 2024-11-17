@@ -18,38 +18,11 @@ export default {
           800: '#171311',
         },
       },
-      animation: {
-        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
-        float: 'float 4s ease-out forwards',
-        'fade-out': 'fadeOut 4s ease-out forwards',
-      },
-      keyframes: {
-        fadeInUp: {
-          '0%': {
-            opacity: '0',
-            transform: 'translateY(30px)',
-          },
-          '100%': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
-        },
-        float: {
-          '0%': {
-            transform: 'translateY(100vh)',
-            opacity: '1',
-          },
-          '100%': {
-            transform: 'translateY(-100vh)',
-            opacity: '0',
-          },
-        },
-        fadeOut: {
-          '0%': { opacity: '1' },
-          '50%': { opacity: '1' },
-          '100%': { opacity: '0' },
-        },
-      },
+      fontFamily: {
+        cursive: ['Charmonman', 'cursive'],
+        sub: ['Edu AU VIC WA NT Pre', 'cursive'],
+        sans: ['Nunito Sans', 'sans-serif'],
+      }
     },
   },
   plugins: [],

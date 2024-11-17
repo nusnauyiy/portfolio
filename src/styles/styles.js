@@ -1,11 +1,11 @@
 export const createStyles = () => ({
   layout: {
-    section: 'py-20',
-    container: 'max-w-4xl mx-auto px-4',
+    section: 'py-28',
+    container: 'max-w-4xl mx-auto px-5',
   },
 
   text: {
-    h1: 'text-6xl font-extrabold',
+    h1: 'text-7xl font-bold',
     h2: 'text-3xl font-bold',
     h3: 'text-2xl font-extralight',
     body: 'text-md leading-relaxed',
@@ -43,7 +43,6 @@ export const createStyles = () => ({
   components: {
     card: {
       base: 'rounded-lg shadow-md dark:shadow-2xl overflow-hidden',
-      hover: 'hover:shadow-xl transition-shadow duration-300',
     },
     button: {
       primary: 'bg-amber-600 hover:bg-amber-700 text-white',
@@ -86,17 +85,13 @@ export const createStyles = () => ({
       6: 'mb-6',
       8: 'mb-8',
       12: 'mb-12',
-    },
-    gap: {
-      6: 'gap-6',
-      12: 'gap-12',
-    },
+    }
   },
 
   sections: {
     hero: {
       wrapper: 'h-screen relative flex items-center justify-center overflow-hidden',
-      overlay: `absolute inset-0 bg-ash-800/60`,
+      overlay: `absolute inset-0 bg-ash-700/60`,
       image: 'absolute inset-0 w-full h-[120%] object-cover -z-10',
       content: 'text-center z-10',
     },
@@ -116,9 +111,12 @@ export const createStyles = () => ({
 
   // Animation utilities
   animation: {
-    fadeIn: 'transition-all duration-700',
-    fadeInInitial: 'opacity-0 translate-y-10',
-    fadeInVisible: 'opacity-100 translate-y-0',
+    fadeIn: 'transition-all duration-1000',
+    fadeInInitialX1: 'opacity-0 translate-x-1/4',
+    fadeInInitialX2: 'opacity-0 -translate-x-1/4',
+    fadeInInitialY1: 'opacity-0 translate-y-12',
+    fadeInInitialY2: 'opacity-0 -translate-y-12',
+    fadeInVisible: 'opacity-100 translate-x-0 translate-y-0',
     hover: 'transition-all duration-300 hover:scale-110',
   },
 });

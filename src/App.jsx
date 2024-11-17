@@ -27,7 +27,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <div className="min-h-full max-w-full">
+    <div className="min-h-full max-w-full font-sans">
       <ParticleCursor />
       <ThemeProvider>
         <AppContent />
