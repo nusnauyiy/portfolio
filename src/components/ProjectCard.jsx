@@ -34,7 +34,7 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
           <div className="flex gap-4">
             <a
               href={project.link}
-              className={`${styles.components.button.primary} px-6 py-2 rounded-md 
+              className={`${styles.components.button.primary} ${styles.animation.hover} px-6 py-2 rounded-md 
                 inline-flex items-center gap-2`}>
               <ExternalLink size={16} />
               {isPaper ? "Read" : "View"}
@@ -42,7 +42,7 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
             {project.github &&
               <a
                 href={project.github}
-                className={`${styles.components.button.secondary} px-6 py-2 rounded-md 
+                className={`${styles.components.button.secondary} ${styles.animation.hover} px-6 py-2 rounded-md 
                 inline-flex items-center gap-2`}>
                 <Code size={16} />
                 Code

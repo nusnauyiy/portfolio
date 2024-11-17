@@ -117,9 +117,9 @@ export const createStyles = () => ({
   // Animation utilities
   animation: {
     fadeIn: 'transition-all duration-700',
-    fadeInInitial: 'opacity-0 translate-y-8',
+    fadeInInitial: 'opacity-0 translate-y-10',
     fadeInVisible: 'opacity-100 translate-y-0',
-    hover: 'transition-all duration-300 hover:scale-105',
+    hover: 'transition-all duration-300 hover:scale-110',
   },
 });
 
