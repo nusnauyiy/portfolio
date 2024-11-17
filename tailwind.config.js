@@ -5,6 +5,19 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        ash: {
+          50: '#F5F3F2',
+          100: '#EAE7E5',
+          200: '#B8B2AE',
+          300: '#918982',
+          400: '#5D5652',
+          500: '#4A433D',
+          600: '#403933',
+          700: '#302822',
+          800: '#171311',
+        },
+      },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
         float: 'float 4s ease-out forwards',

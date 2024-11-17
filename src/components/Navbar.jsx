@@ -17,7 +17,7 @@ export const Navbar = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId.toLowerCase());
+    const element = document.getElementById(sectionId);
     const navHeight = 80;
     const targetPosition = element.offsetTop - navHeight;
 

@@ -5,22 +5,19 @@ export const SECTIONS = {
   about: {
     id: 'About',
     title: 'About Me',
-    titleStyles: '',
   },
   skills: {
     id: 'Skills',
     title: 'Technical Skills',
-    titleStyles: 'bg-gray-50 dark:bg-gray-800',
+    containerStyles: 'bg-ash-100 dark:bg-ash-800',
   },
   portfolio: {
     id: 'Portfolio',
     title: 'Portfolio',
-    titleStyles: '',
   },
   contact: {
     id: 'Contact',
     title: 'Get in Touch',
-    titleStyles: '',
     contentStyles: 'text-center',
   },
 };

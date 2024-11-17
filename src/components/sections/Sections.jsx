@@ -23,7 +23,8 @@ export const Sections = () => {
         id={section.id}
         title={section.title}
         titleStyles={section.titleStyles}
-        contentStyles={section.contentStyles}>
+        contentStyles={section.contentStyles}
+        containerStyles={section.containerStyles}>
         <ContentComponent />
       </Section>
     );

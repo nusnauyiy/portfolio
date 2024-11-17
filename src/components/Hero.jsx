@@ -11,10 +11,10 @@ export const Hero = () => {
   });
 
   return (
-    <section className={styles.sections.hero.wrapper}>
+    <section id={'home'} className={styles.sections.hero.wrapper}>
       <div className="absolute inset-0" style={parallaxStyle(0.5)}>
         <img
-          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80"
+          src='./src/assets/suzie_hero.jpg'
           alt="background"
           className={styles.sections.hero.image}
         />

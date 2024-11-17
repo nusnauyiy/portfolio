@@ -5,7 +5,7 @@ export const Section = ({
   title,
   containerStyles = '',
   titleStyles = '',
-  contentStyles = '', // New prop for content wrapper styles
+  contentStyles = '',
   children,
 }) => {
   return (
