@@ -28,12 +28,12 @@ const AppContent = () => {
 
 function App() {
   return (
-    <>
-    <ParticleCursor />
-    <ThemeProvider>
-      <AppContent />
-    </ThemeProvider>
-    </>
+    <div className="min-h-full">
+      <ParticleCursor />
+      <ThemeProvider>
+        <AppContent />
+      </ThemeProvider>
+    </div>
   );
 }
 

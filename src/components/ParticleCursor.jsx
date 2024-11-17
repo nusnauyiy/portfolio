@@ -8,15 +8,29 @@ const ParticleCursor = () => {
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const lastTouchRef = useRef({ x: 0, y: 0, time: 0 });
 
-  // Physics constants
-  const GRAVITY = 0.3;
-  const FRICTION = 0.99;
-  const BOUNCE_DAMPING = 0.7;
-  const PARTICLE_LIFETIME = 2500;
-  const MIN_MOVE_DISTANCE = 2; // Minimum pixels moved before spawning new particles
-  const BASE_SPAWN_RATE = 0.4; // Base probability of spawning a particle
-  const MIN_WAIT_TIME = 40; // Minimum wait time before new particle is spawn
+  // Separate physics constants for mobile and desktop
+  const physics = {
+    desktop: {
+      GRAVITY: 0.3,
+      FRICTION: 0.99,
+      BOUNCE_DAMPING: 0.7,
+      VELOCITY_MULTIPLIER: 0.2,
+      INITIAL_VELOCITY: 3
+    },
+    mobile: {
+      GRAVITY: 0.5,         // Increased gravity
+      FRICTION: 0.98,       // Slightly more friction
+      BOUNCE_DAMPING: 0.75, // More bouncy
+      VELOCITY_MULTIPLIER: 0.4, // Doubled velocity multiplier
+      INITIAL_VELOCITY: 5    // Increased initial velocity
+    }
+  };
 
+  // Common constants
+  const PARTICLE_LIFETIME = 2500;
+  const SPAWN_OFFSET = 30;
+  const MIN_MOVE_DISTANCE = 5;
+  const BASE_SPAWN_RATE = 0.3;
 
   // Check device capabilities on mount
   useEffect(() => {
@@ -54,16 +68,21 @@ const ParticleCursor = () => {
   }, []);
 
   const createParticle = useCallback((x, y, velocityX = 0, velocityY = 0) => {
-    // Adjust particle properties based on device
-    const sizeFactor = isMobile ? 0.7 : 1; // Smaller particles on mobile
+    const p = isMobile ? physics.mobile : physics.desktop;
+    
+    // Calculate spawn position with offset
+    const angle = Math.atan2(velocityY, velocityX);
+    const offsetDistance = Math.random() * SPAWN_OFFSET;
+    const spawnX = x - Math.cos(angle) * offsetDistance;
+    const spawnY = y - Math.sin(angle) * offsetDistance;
     
     return {
-      x,
-      y,
-      velocityX: (Math.random() - 0.5) * 3 + velocityX * 0.2,
-      velocityY: (Math.random() - 0.5) * 3 + velocityY * 0.2,
-      size: Math.random() * 10 + 10 * sizeFactor,
-      color: `hsl(${Math.random() * 130}, 60%, 50%)`,
+      x: spawnX,
+      y: spawnY,
+      velocityX: (Math.random() - 0.5) * p.INITIAL_VELOCITY + velocityX * p.VELOCITY_MULTIPLIER,
+      velocityY: (Math.random() - 0.5) * p.INITIAL_VELOCITY + velocityY * p.VELOCITY_MULTIPLIER,
+      size: (Math.random() * 10 + 10),
+      color: `hsl(${Math.random() * 125}, 60%, 60%)`,
       id: Date.now() + Math.random(),
       createdAt: Date.now(),
     };
@@ -95,7 +114,7 @@ const ParticleCursor = () => {
       setPosition({ x: clientX, y: clientY });
       
       if (distanceMoved >= MIN_MOVE_DISTANCE && 
-          currentTime - lastSpawnTime > (isMobile ? MIN_WAIT_TIME * 2 : MIN_WAIT_TIME)) {
+          currentTime - lastSpawnTime > (isMobile ? 100 : 50)) {
         
         const moveSpeed = Math.sqrt(velocityX * velocityX + velocityY * velocityY);
         const spawnProbability = BASE_SPAWN_RATE * Math.min(1, moveSpeed / 10);
@@ -124,7 +143,6 @@ const ParticleCursor = () => {
     const handleTouchMove = (e) => {
       if (e.touches.length > 0) {
         const touch = e.touches[0];
-        // Convert touch position to page coordinates
         const clientX = touch.clientX;
         const clientY = touch.clientY;
         
@@ -153,6 +171,7 @@ const ParticleCursor = () => {
       const currentTime = Date.now();
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
+      const p = isMobile ? physics.mobile : physics.desktop;
       
       setParticles(prevParticles => 
         prevParticles
@@ -160,23 +179,23 @@ const ParticleCursor = () => {
           .map(particle => {
             let { x, y, velocityX, velocityY } = particle;
             
-            velocityX *= FRICTION;
-            velocityY = velocityY * FRICTION + GRAVITY;
+            velocityX *= p.FRICTION;
+            velocityY = velocityY * p.FRICTION + p.GRAVITY;
             
             if (x < 0 && velocityX < 0) {
               x = 0;
-              velocityX = -velocityX * BOUNCE_DAMPING;
+              velocityX = -velocityX * p.BOUNCE_DAMPING;
             } else if (x > windowWidth && velocityX > 0) {
               x = windowWidth;
-              velocityX = -velocityX * BOUNCE_DAMPING;
+              velocityX = -velocityX * p.BOUNCE_DAMPING;
             }
             
             if (y < 0 && velocityY < 0) {
               y = 0;
-              velocityY = -velocityY * BOUNCE_DAMPING;
+              velocityY = -velocityY * p.BOUNCE_DAMPING;
             } else if (y > windowHeight && velocityY > 0) {
               y = windowHeight;
-              velocityY = -velocityY * BOUNCE_DAMPING;
+              velocityY = -velocityY * p.BOUNCE_DAMPING;
             }
             
             return {
@@ -227,17 +246,17 @@ const ParticleCursor = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
       {/* Main cursor - only show on desktop */}
-      {isVisible && (
-      <div
-        className="fixed w-4 h-4 -ml-2 -mt-2 rounded-full mix-blend-difference"
-        style={{
-          left: position.x,
-          top: position.y,
-          boxShadow: '0 0 15px rgba(255, 120, 0, 0.6)',
-          transition: 'transform 0.1s ease-out',
-        }}
-      />
-    )}
+      {!isMobile && isVisible && (
+        <div
+          className="fixed w-4 h-4 -ml-2 -mt-2 rounded-full mix-blend-difference"
+          style={{
+            left: position.x,
+            top: position.y,
+            boxShadow: '0 0 10px rgba(255, 125, 0, 0.6)',
+            transition: 'transform 0.1s ease-out',
+          }}
+        />
+      )}
       
       {/* Particles */}
       {particles.map(particle => {
