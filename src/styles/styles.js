@@ -77,7 +77,7 @@ export const createStyles = () => ({
   },
 
   grid: {
-    skills: 'grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6',
+    skills: 'grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6',
   },
 
   spacing: {
@@ -103,8 +103,8 @@ export const createStyles = () => ({
     skills: {
       card: `
         flex flex-col items-center p-4 rounded-xl
-        bg-white dark:bg-ash-500 shadow-lg
-        transition-all duration-500
+        bg-white dark:bg-ash-600 shadow-lg
+        transition-all duration-500 space-y-2
       `,
       icon: 'w-12 h-12 mb-3',
     },

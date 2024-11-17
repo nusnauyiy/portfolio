@@ -52,7 +52,7 @@ export const Navbar = () => {
                 e.preventDefault();
                 scrollToSection('home');
               }}
-              className={`font-bold text-xl ${navClasses.text}`}>
+              className={`font-extrabold text-xl ${navClasses.text}`}>
               {INITIALS}
             </a>
 

@@ -1,5 +1,10 @@
 // src/constants/index.js
 import { Github, Linkedin as LinkedInIcon, Mail as MailIcon } from 'lucide-react';
+import { faHtml5, faJava, faCss3, faJs, faReact, faNodeJs, faPython, faAws, faDocker, faRProject } from '@fortawesome/free-brands-svg-icons'
+import { faDatabase } from '@fortawesome/free-solid-svg-icons'
+import { ThemedIcon } from '../components/ThemedIcon';
+import { ReactComponent as Kubernetes } from '../assets/kubernetes.svg'
+import { ReactComponent as Scala } from '../assets/scala.svg'
 
 export const SECTIONS = {
   about: {
@@ -52,79 +57,74 @@ export const PROJECTS = [
 ];
 
 const FE = "Frontend"
-const BE ="Backend"
-const DEVOPS ="DevOps"
+const BE = "Backend"
+const DEVOPS = "DevOps"
 const DS = "Data Science"
 
 export const SKILLS = [
   {
     name: 'HTML5',
-    icon: '/path/to/html5.svg',
+    icon: <ThemedIcon Icon={faHtml5} />,
     category: FE,
   },
   {
     name: 'CSS3',
-    icon: '/path/to/css3.svg',
+    icon: <ThemedIcon Icon={faCss3} />,
     category: FE,
   },
   {
     name: 'JavaScript',
-    icon: '/path/to/javascript.svg',
+    icon: <ThemedIcon Icon={faJs} />,
     category: FE,
   },
   {
     name: 'React',
-    icon: '/path/to/react.svg',
+    icon: <ThemedIcon Icon={faReact} />,
     category: FE,
   },
   {
     name: 'Node.js',
-    icon: '/path/to/nodejs.svg',
+    icon: <ThemedIcon Icon={faNodeJs} />,
     category: BE,
   },
   {
     name: 'Python',
-    icon: '/path/to/python.svg',
+    icon: <ThemedIcon Icon={faPython} />,
     category: BE,
   },
   {
     name: 'Java',
-    icon: '/path/to/java.svg',
+    icon: <ThemedIcon Icon={faJava} />,
     category: BE,
   },
   {
     name: 'Scala',
-    icon: '/path/to/java.svg',
+    icon: <ThemedIcon Icon={Scala} isFA={false} />,
     category: BE,
   },
   {
     name: 'AWS',
-    icon: '/path/to/aws.svg',
+    icon: <ThemedIcon Icon={faAws} />,
     category: DEVOPS,
   },
   {
     name: 'Docker',
-    icon: '/path/to/docker.svg',
+    icon: <ThemedIcon Icon={faDocker} />,
     category: DEVOPS,
   },
   {
     name: 'Kubernetes',
-    icon: '/path/to/docker.svg',
+    icon: <ThemedIcon Icon={Kubernetes} isFA={false} />,
     category: DEVOPS,
   },
   {
-    name: 'SQL',
-    icon: '/path/to/docker.svg',
-    category: DS,
-  },
-  {
     name: 'R',
-    icon: '/path/to/docker.svg',
+    icon: <ThemedIcon Icon={faRProject} />,
     category: DS,
   },
   {
-    name: 'MATLAB',
-    icon: '/path/to/docker.svg',
+    name: 'SQL',
+    icon: <ThemedIcon Icon={faDatabase} />,
     category: DS,
   },
 ];
@@ -137,12 +137,12 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'LinkedIn',
-    icon: LinkedInIcon, 
+    icon: LinkedInIcon,
     url: 'https://ca.linkedin.com/in/y-suzette-sun/',
   },
   {
     name: 'Email',
-    icon: MailIcon, 
+    icon: MailIcon,
     url: 'mailto:me@artzie.stream',
   },
 ];

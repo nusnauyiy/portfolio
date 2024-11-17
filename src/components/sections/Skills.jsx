@@ -24,7 +24,7 @@ export const Skills = () => {
                     ${hiddenElements.has(`${category}-${skill.name}`) ? 'opacity-0 translate-y-8' : ''}
                     ${visibleElements.has(`${category}-${skill.name}`) ? 'opacity-100 translate-y-0' : ''}
                   `}>
-                <img src={skill.icon} alt={skill.name} className={styles.sections.skills.icon} />
+                {skill.icon}
                 <span className={`${styles.text.small} ${styles.colors.text.primary}`}>
                   {skill.name}
                 </span>
