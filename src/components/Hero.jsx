@@ -14,7 +14,7 @@ export const Hero = () => {
     <section id={'home'} className={styles.sections.hero.wrapper}>
       <div className="absolute inset-0" style={parallaxStyle(0.5)}>
         <img
-          src='./src/assets/hero.jpg'
+          src='/hero.jpg'
           alt="background"
           className={styles.sections.hero.image}
         />
