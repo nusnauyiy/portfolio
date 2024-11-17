@@ -1,4 +1,3 @@
-// src/components/ThemeToggle.jsx
 import { Sun, Moon } from 'lucide-react';
 import { useTheme } from '../contexts/useTheme';
 import { styles } from '../styles/styles';

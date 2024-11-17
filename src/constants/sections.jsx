@@ -1,4 +1,3 @@
-// src/constants/index.js
 import { Github, Linkedin as LinkedInIcon, Mail as MailIcon } from 'lucide-react';
 import { faHtml5, faJava, faCss3, faJs, faReact, faNodeJs, faPython, faAws, faDocker, faRProject } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
@@ -22,7 +21,7 @@ export const SECTIONS = {
   },
   contact: {
     id: 'Contact',
-    title: 'Get in Touch',
+    title: `Let's Connect!`,
     contentStyles: 'text-center',
   },
 };

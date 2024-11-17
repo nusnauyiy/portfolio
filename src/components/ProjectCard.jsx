@@ -1,4 +1,3 @@
-// src/components/ProjectCard.jsx
 import { ExternalLink, Code } from 'lucide-react';
 import { styles } from '../styles/styles';
 

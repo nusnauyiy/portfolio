@@ -1,4 +1,3 @@
-// src/components/sections/Sections.jsx
 import { Section } from '../Section';
 import { SECTIONS } from '../../constants/sections';
 import { About } from './About';

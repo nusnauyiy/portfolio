@@ -7,7 +7,6 @@ export const NAME = 'Suzette Sun'
 
 export const SUBTITLE = "Full Stack Software Engineer"
 
-// For navbar items
 export const NAV_ITEMS = Object.values(SECTIONS).map((section) => section.id);
 
 export const BUTTON_ICONS = {

@@ -1,4 +1,3 @@
-// src/App.jsx
 import { ThemeProvider } from './contexts/ThemeProvider';
 import { useTheme } from './contexts/useTheme';
 import { Navbar } from './components/Navbar';
@@ -28,7 +27,7 @@ const AppContent = () => {
 
 function App() {
   return (
-    <div className="min-h-full">
+    <div className="min-h-full max-w-full">
       <ParticleCursor />
       <ThemeProvider>
         <AppContent />

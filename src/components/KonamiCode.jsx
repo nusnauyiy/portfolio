@@ -1,4 +1,3 @@
-// src/components/EasterEgg.jsx
 import { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
 
@@ -86,7 +85,7 @@ export const KonamiCode = () => {
         style={{
           color: 'red',
         }}>
-        {'Harkunwar loves Cutie <3'}
+        {'Meet my love at -> harkunwar.com <-'}
       </div>
     </div>
   );

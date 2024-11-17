@@ -1,6 +1,6 @@
 import { SOCIAL_LINKS } from '../../constants/sections';
 import { styles } from '../../styles/styles';
-// src/components/sections/Contact.jsx
+
 export const Contact = () => {
   return (
     <div className={styles.sections.social.wrapper}>

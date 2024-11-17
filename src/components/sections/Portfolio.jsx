@@ -1,4 +1,3 @@
-// src/components/sections/Portfolio.jsx
 import { useIntersectionObserver } from '../../hooks/useIntersectionObserver';
 import { ProjectCard } from '../ProjectCard';
 import { PROJECTS } from '../../constants/sections';
