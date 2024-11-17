@@ -7,6 +7,7 @@ import { Sections } from './components/sections/Sections';
 import { ThemeToggle } from './components/ThemeToggle';
 import { createStyles } from './styles/styles';
 import { KonamiCode } from './components/KonamiCode';
+import ParticleCursor from './components/ParticleCursor';
 
 const AppContent = () => {
   const { isDarkMode } = useTheme();
@@ -27,9 +28,12 @@ const AppContent = () => {
 
 function App() {
   return (
+    <>
+    <ParticleCursor />
     <ThemeProvider>
       <AppContent />
     </ThemeProvider>
+    </>
   );
 }
 
