@@ -19,6 +19,7 @@
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Custom scrollbar styling */
