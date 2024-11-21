@@ -16,10 +16,14 @@
   --ash-800: #171311;
 }
 
+#app {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* Enable smooth scrolling */
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 /* Custom scrollbar styling */
