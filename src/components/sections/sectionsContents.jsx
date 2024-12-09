@@ -81,12 +81,6 @@ export const PROJECTS = [
     image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
     github: 'https://github.com/nusnauyiy/MyMusicPlayer',
   },
-  {
-    title: 'Image Manipulator',
-    description: 'A custom music player that manage your local playlists with multiple play modes',
-    image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
-    github: 'https://github.com/nusnauyiy/MyMusicPlayer',
-  },
 ];
 
 const FE = "Frontend"
