@@ -4,6 +4,8 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { ThemedIcon } from '../ThemedIcon';
 import { ReactComponent as Kubernetes } from '../../assets/kubernetes.svg'
 import { ReactComponent as Scala } from '../../assets/scala.svg'
+import { ReactComponent as Bear } from '../../assets/bear.svg'
+import { ReactComponent as MusicPlayer } from '../../assets/music-player.svg'
 import { About } from './About';
 import { Contact } from './Contact';
 import { Skills } from './Skills';
@@ -69,9 +71,21 @@ export const PROJECTS = [
   {
     title: 'Bear Buddies',
     description: 'A pet-nurturing web-based game that received Honourable Mention in nwHacks 2021.',
-    image: '/api/placeholder/600/400',
-    link: '#',
-    github: '#',
+    image: <ThemedIcon Icon={Bear} height={'100%'} isFA={false} />,
+    link: 'https://bear-buddies.herokuapp.com/',
+    github: 'https://github.com/n-lina/bear-buddies',
+  },
+  {
+    title: 'My Music Player',
+    description: 'A custom music player that manage your local playlists with multiple play modes',
+    image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
+    github: 'https://github.com/nusnauyiy/MyMusicPlayer',
+  },
+  {
+    title: 'Image Manipulator',
+    description: 'A custom music player that manage your local playlists with multiple play modes',
+    image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
+    github: 'https://github.com/nusnauyiy/MyMusicPlayer',
   },
 ];
 

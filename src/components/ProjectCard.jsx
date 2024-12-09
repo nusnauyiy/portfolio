@@ -18,7 +18,7 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
         ${!reverse ? 'md:flex-row' : 'md:flex-row-reverse'}
         items-stretch
       `}>
-        <div className={`w-full ${!isPaper && "md:w-2/5"} p-8 flex flex-col justify-center`}>
+        <div className={`w-full ${!isPaper && "md:w-3/5"} p-8 flex flex-col justify-center`}>
           <h3 className={`${styles.text.h3} ${styles.colors.text.primary} mb-4`}>
             {project.title}
           </h3>
@@ -26,13 +26,15 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
             {project.description}
           </p>
           <div className="flex gap-4">
-            <a
-              href={project.link}
-              className={`${styles.components.button.primary} ${styles.animation.hover} px-6 py-2 rounded-md 
+            {project.link &&
+              <a
+                href={project.link}
+                className={`${styles.components.button.primary} ${styles.animation.hover} px-6 py-2 rounded-md 
                 inline-flex items-center gap-2`}>
-              <ExternalLink size={16} />
-              {isPaper ? "Read" : "View"}
-            </a>
+                <ExternalLink size={16} />
+                {isPaper ? "Read" : "View"}
+              </a>
+            }
             {project.github &&
               <a
                 href={project.github}
@@ -43,12 +45,8 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
               </a>}
           </div>
         </div>
-        {!isPaper && <div className="w-full md:w-3/5">
-          <img
-            src={project.image}
-            alt={project.title}
-            className="w-full h-64 md:h-full object-cover"
-          />
+        {!isPaper && <div className="w-full md:w-2/5 items-center justify-center">
+          {project.image}
         </div>}
       </div>
     </div>
