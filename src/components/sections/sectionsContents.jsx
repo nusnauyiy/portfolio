@@ -53,7 +53,7 @@ export const ABOUT_SECTION = `As a software engineer at Splunk, I build modern w
 export const RESEARCH_PROJECTS = [
   {
     title: 'Grammar Inference from Pseudo-Grammar',
-    description: `Investigation GRIMOIRE Fuzzer's suitability as a grammar mining tool. UBC BSc Computer Science Honours thesis supervised by Dr. Caroline Lemieux.`,
+    description: `Investigating GRIMOIRE Fuzzer's suitability as a grammar mining tool. UBC BSc Computer Science Honours thesis supervised by Dr. Caroline Lemieux.`,
     link: 'https://drive.google.com/file/d/16ZVR54J0cytihtzncTr8wqTQQ7FX2rau/view?usp=sharing',
     github: 'https://github.com/nusnauyiy/SimpleGrimoire',
   },
@@ -61,6 +61,7 @@ export const RESEARCH_PROJECTS = [
     title: 'What is Affective Touch Made Of?',
     description: 'Co-authored paper (UIST 2024) on how high-fidelity soft capacitive sensor array reveals the interplay of shear and pressure in affective touch, supervised by Dr. Karon MacLean from UBC Sensory Perception and Interaction Research Group and Dr. John Madden from UBC Molecular Mechatronics Lab.',
     link: 'https://dl.acm.org/doi/abs/10.1145/3654777.3676346',
+    github: 'https://github.com/nusnauyiy/ShearSenseDataCollection'
   },
   {
     title: 'VR Controller for Open-World Adventure Games',
@@ -72,27 +73,27 @@ export const RESEARCH_PROJECTS = [
 export const PROJECTS = [
   {
     title: 'PLAICraft',
-    description: 'A social platform that provides free multi-player Minecraft gameplay and collects gameplay data for AI research, developed in collaboration with UBC Pacific Laboratory of AI, supervised by Dr. Frank Wood.',
+    description: 'A large social platform that provides free multi-player Minecraft gameplay and collects gameplay data, developed in collaboration with UBC Pacific Laboratory of AI, supervised by Dr. Frank Wood. Try it out with friends (and help AI research)!',
     link: 'https://plaicraft.ai',
     image: <img src='https://plaicraft.ai/logo.png' />,
   },
   {
     title: 'Palette Viz',
-    description: 'A color palette visualization tool that generates website palettes from standard color theory.',
+    description: 'A color palette visualization tool that generates website palettes from standard color theory. Website theming made easy!',
     link: 'https://palette.artzie.stream/',
     image: <ThemedIcon Icon={Palette} height={'85%'} isFA={false} />,
     github: 'https://github.com/nusnauyiy/PaletteViz',
   },
   {
     title: 'Bear Buddies',
-    description: 'A pet-nurturing web-based game that received Honourable Mention in nwHacks 2021.',
+    description: 'A tamagotchi-style pet-nurturing web-based game that received Honourable Mention in nwHacks 2021.',
     image: <ThemedIcon Icon={Bear} height={'85%'} isFA={false} />,
     link: 'https://bear-buddies.herokuapp.com/',
     github: 'https://github.com/n-lina/bear-buddies',
   },
   {
     title: 'My Music Player',
-    description: 'A custom music player that manage your local playlists with multiple play modes.',
+    description: 'A custom music player that manages your local playlists with multiple play modes. Old fashioned, but gets the job done.',
     image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
     github: 'https://github.com/nusnauyiy/MyMusicPlayer',
   },
@@ -101,7 +102,7 @@ export const PROJECTS = [
 const FE = "Frontend"
 const BE = "Backend"
 const DEVOPS = "DevOps"
-const DS = "Data Science"
+const DS = "Data Stuff"
 
 export const SKILLS = [
   {
