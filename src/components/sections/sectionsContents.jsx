@@ -1,10 +1,12 @@
 import { Github, Linkedin as LinkedInIcon, Mail as MailIcon } from 'lucide-react';
-import { faHtml5, faJava, faCss3, faJs, faReact, faNodeJs, faPython, faAws, faDocker, faRProject } from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faJava, faCss3, faJs, faReact, faNodeJs, faPython, faAws, faDocker, faRProject, faGolang } from '@fortawesome/free-brands-svg-icons'
 import { faDatabase } from '@fortawesome/free-solid-svg-icons'
 import { ThemedIcon } from '../ThemedIcon';
 import { ReactComponent as Kubernetes } from '../../assets/kubernetes.svg'
 import { ReactComponent as Scala } from '../../assets/scala.svg'
+import { ReactComponent as Solid } from '../../assets/solid.svg'
 import { ReactComponent as Bear } from '../../assets/bear.svg'
+import { ReactComponent as Palette } from '../../assets/palette.svg'
 import { ReactComponent as MusicPlayer } from '../../assets/music-player.svg'
 import { About } from './About';
 import { Contact } from './Contact';
@@ -42,11 +44,11 @@ export const SECTIONS = {
   },
 };
 
-export const ABOUT_SECTION = `As a software engineer at Splunk, I build modern web applications that bridge technical excellence with user experience.
-        My engineering journey was shaped by my time at Univerity of British Columbia, where I explored computer science research and found my sweet spot: the intersection of robust engineering and human-computer interaction.
+export const ABOUT_SECTION = `As a software engineer at Splunk, I build modern web applications and APIs that bridge complex cloud services with refined user experiences.
+        My engineering journey was shaped by my time at Univerity of British Columbia, where I explored various computer science topics with extensive research and found my sweet spot: the intersection of robust software engineering and human-computer interaction.
         Today, I channel that foundation into crafting clean, user-friendly solutions.
         When I'm not coding, you can find me designing graphics, arranging music, or convincing my cat, 
-        Rumba, that keyboards are not cat beds (still WIP).`;
+        Rumba, that keyboards are not nap spots (still WIP).`;
 
 export const RESEARCH_PROJECTS = [
   {
@@ -69,15 +71,28 @@ export const RESEARCH_PROJECTS = [
 
 export const PROJECTS = [
   {
+    title: 'PLAICraft',
+    description: 'A social platform that provides free multi-player Minecraft gameplay and collects gameplay data for AI research, developed in collaboration with UBC Pacific Laboratory of AI, supervised by Dr. Frank Wood.',
+    link: 'https://plaicraft.ai',
+    image: <img src='https://plaicraft.ai/logo.png' />,
+  },
+  {
+    title: 'Palette Viz',
+    description: 'A color palette visualization tool that generates website palettes from standard color theory.',
+    link: 'https://palette.artzie.stream/',
+    image: <ThemedIcon Icon={Palette} height={'85%'} isFA={false} />,
+    github: 'https://github.com/nusnauyiy/PaletteViz',
+  },
+  {
     title: 'Bear Buddies',
     description: 'A pet-nurturing web-based game that received Honourable Mention in nwHacks 2021.',
-    image: <ThemedIcon Icon={Bear} height={'100%'} isFA={false} />,
+    image: <ThemedIcon Icon={Bear} height={'85%'} isFA={false} />,
     link: 'https://bear-buddies.herokuapp.com/',
     github: 'https://github.com/n-lina/bear-buddies',
   },
   {
     title: 'My Music Player',
-    description: 'A custom music player that manage your local playlists with multiple play modes',
+    description: 'A custom music player that manage your local playlists with multiple play modes.',
     image: <ThemedIcon Icon={MusicPlayer} height={'100%'} isFA={false} />,
     github: 'https://github.com/nusnauyiy/MyMusicPlayer',
   },
@@ -100,13 +115,18 @@ export const SKILLS = [
     category: FE,
   },
   {
-    name: 'JavaScript',
+    name: 'JS/TS',
     icon: <ThemedIcon Icon={faJs} />,
     category: FE,
   },
   {
-    name: 'React',
+    name: 'React.js',
     icon: <ThemedIcon Icon={faReact} />,
+    category: FE,
+  },
+  {
+    name: 'Solid.js',
+    icon: <ThemedIcon Icon={Solid} isFA={false} />,
     category: FE,
   },
   {
@@ -122,6 +142,11 @@ export const SKILLS = [
   {
     name: 'Java',
     icon: <ThemedIcon Icon={faJava} />,
+    category: BE,
+  },
+  {
+    name: 'Golaong',
+    icon: <ThemedIcon Icon={faGolang} />,
     category: BE,
   },
   {

@@ -45,7 +45,7 @@ export const ProjectCard = ({ project, index, isVisible, isHidden, isPaper = fal
               </a>}
           </div>
         </div>
-        {!isPaper && <div className="w-full md:w-2/5 items-center justify-center">
+        {!isPaper && <div className="w-full md:w-2/5 flex items-center justify-center p-4">
           {project.image}
         </div>}
       </div>
